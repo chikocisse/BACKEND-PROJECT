@@ -1,0 +1,20 @@
+<!-- backend/myapp/templates/check_plagiarism_form.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détection de Plagiat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container py-5">
+    <h1 class="mb-4">Soumettre un exercice pour détection de plagiat</h1>
+
+    <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Vérifier</button>
+    </form>
+</body>
+</html>
+
+
